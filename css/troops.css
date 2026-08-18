@@ -1,0 +1,125 @@
+.troops-layout{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.troop-card{
+    position: relative;
+    background: var(--dark-card);
+    border: 1px solid transparent;
+    border-radius: 18px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: var(--shadow-card);
+    transition:transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.troop-card:hover{
+    transform: translateY(-10px);
+    border-color: var(--tosca-glow);
+    box-shadow: 0 20px 60px var(--black-shadow), 0 0 25px var(--tosca-shadow-strong), 0 0 50px var(--tosca-shadow);
+}
+
+.troop-image-container{
+    position: relative;
+    height: 380px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.troop-image-container img{
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.2s ease;
+}
+
+.troop-card:hover .troop-image-container img{
+    transform: scale(1.05);
+}
+
+.troop-name{
+    padding: 14px;
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    background: var(--dark-card);
+}
+
+.troop-stats{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 22px 18px;
+    background: var(--card-overlay-strong);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.3s ease;
+    z-index: 2;
+}
+
+.troop-card:hover .troop-stats{
+    opacity: 1;
+    visibility: visible;
+}
+
+.troop-stats h4{
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-align: center;
+    color: var(--gold);
+    border-bottom: 1px solid var(--gold-dark);
+}
+
+.stat-data{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 2px solid var(--white-border-soft);
+}
+
+.stat-label{
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: var(--text-primary);
+}
+
+.stat-value{
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-align: right;
+    color: var(--tosca-glow);
+}
+
+@media screen and (max-width: 768px){
+    .troops-layout{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .troop-image-container{
+        height: 240px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .troops-layout{
+        grid-template-columns: 1fr;
+    }
+}

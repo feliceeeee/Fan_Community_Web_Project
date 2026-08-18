@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clash of BaNG - Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Montserrat:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">CLASH OF BANG</a>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="troops.html">Troops</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="register.html" class="active">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="flex-center">
+            <div class="register-container">
+                <h1 class="form-title">JOIN THE STRONGHOLD</h1>
+                <form id="registerForm">
+                    <div class="form-component">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Enter your player name" spellcheck="false">
+                        <span class="error-msg" id="name-error"></span>
+                    </div>
+
+                    <div class="form-component">
+                        <label for="email">Email Address</label>
+                        <input type="text" id="email" placeholder="player@clashofbang.com" spellcheck="false">
+                        <span class="error-msg" id="email-error"></span>
+                    </div>
+
+                    <div class="form-component">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" placeholder="Must be at least 13" min="1" spellcheck="false">
+                        <span class="error-msg" id="age-error"></span>
+                    </div>
+
+                    <div class="form-component">
+                        <label>Gender</label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="gender" value="Male" id="genderMale"> Male
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" value="Female" id="genderFemale"> Female
+                            </label>
+                        </div>
+                        <span class="error-msg" id="gender-error"></span>
+                    </div>
+
+                    <div class="form-component">
+                        <label for="fav-troop">Favorite Troop Category</label>
+                        <select id="fav-troop">
+                            <option value="">Select a Troop</option>
+                            <option value="Tigrarian">Tigrarian</option>
+                            <option value="Witchana">Witchana</option>
+                            <option value="Valkyda">Valkyda</option>
+                            <option value="ALPEKKA">A.L.P.E.K.K.A</option>
+                        </select>
+                        <span class="error-msg" id="troop-error"></span>
+                    </div>
+
+                    <div class="form-component">
+                        <label for="join-motivation">Why do you want to join Clash of BaNG?</label>
+                        <textarea id="join-motivation" rows="3" placeholder="Tell us your motivation..."></textarea>
+                        <span class="error-msg" id="reason-error"></span>
+                    </div>
+
+                    <button type="submit" id="btn-submit">SUBMIT REGISTRATION</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <div id="dialog-box">
+        <p id="error-message">Error message here</p>
+    </div>
+
+    <footer>
+        <p class="footer-title">CLASH OF BANG</p>
+        <p class="footer-copy">&copy; 2026 Clash of BaNG Community. All rights reserved.</p>
+        <p class="disclaimer">Not an official Supercell or Moonton product.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

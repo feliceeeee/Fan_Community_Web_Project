@@ -1,0 +1,239 @@
+:root{
+    --gold: #f9be02;
+    --gold-dark: #C9971A;
+    --tosca-glow: #b2e8eb;
+    --blue-grey: #54798A;
+    --dark-navy: #122c39;
+    --dark-card: #112a3d;
+    --dark-border: #2A4060;
+    --text-primary: #ffffff;
+    --text-footer: #b0c4d6;
+    --red-accent: #E84545;
+    --green: #2ecc71;
+    
+    --black-shadow: rgba(0, 0, 0, 0.6);
+    --card-overlay: rgba(11, 30, 45, 0.92);
+    --card-overlay-strong: rgba(11, 30, 45, 0.96);
+    --white-border-soft: rgba(255, 255, 255, 0.08);
+
+    --tosca-shadow: rgba(178, 232, 235, 0.5);
+    --tosca-shadow-strong: rgba(178, 232, 235, 0.7);
+    --font-display: 'Luckiest Guy', cursive;
+    --font-body: 'Montserrat', sans-serif;
+    --card-bg: rgba(18, 44, 57, 0.65);
+    --card-bg-hover: rgba(18, 44, 57, 0.90);
+    --shadow-gold: 0 0 20px rgba(245, 195, 25, 0.3);
+    --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.5);
+    --transition: 0.3s ease;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: var(--font-body);
+    color: var(--text-primary);
+    background-image: url('/assets/Background.png');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1, h2, h3, h4{
+    font-family: var(--font-display);
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--gold);
+    background-color: var(--dark-navy);
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1400px;
+    padding: 20px 5%;
+    margin: 0 auto;
+}
+
+.logo{
+    font-family: var(--font-display);
+    font-size: 25px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    color: var(--gold);
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+}
+
+.nav-links a{
+    position: relative;
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    color: var(--text-primary);
+    transition: var(--transition);
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+    color: var(--gold);
+}
+
+.hamburger{
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span{
+    display: block;
+    height: 2px;
+    width: 25px;
+    background: var(--gold);
+    transition: var(--transition);
+}
+
+main{
+    flex: 1;
+    padding-top: 72px;
+}
+
+.container-main{
+    width: 100%;
+    max-width: 1400px;
+    padding: 50px 5%;
+    margin: 0 auto;
+}
+
+.page-title{
+    margin-bottom: 30px;
+    font-family: var(--font-display);
+    font-size: 32px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    color: var(--gold);
+}
+
+.text-center{
+    text-align: center;
+}
+
+footer{
+    padding: 25px 5%;
+    text-align: center;
+    background-color: var(--dark-navy);
+    border-top: 1px solid var(--dark-border);
+}
+
+.footer-title{
+    margin-bottom: 5px;
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    color: var(--gold);
+}
+
+.footer-copy{
+    font-size: 13px;
+    color: var(--text-footer);
+}
+
+.disclaimer{
+    margin-top: 5px;
+    font-size: 11px;
+    font-style: italic;
+    color: var(--text-footer);
+}
+
+@media screen and (max-width: 768px){
+    nav{
+        padding: 14px 5%;
+    }
+
+    .hamburger{
+        display: flex;
+    }
+
+    .nav-links{
+        display: none;
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 24px;
+        background-color: var(--dark-navy);
+        border-bottom: 1px solid var(--dark-border);
+        z-index: 999;
+        backdrop-filter: blur(10px);
+    }
+
+    .nav-links.open{
+        display: flex;
+    }
+    
+    .nav-links a{
+        font-size: 16px;
+    }
+
+    .container-main{
+        padding: 40px 5% 40px;
+    }
+
+    .page-title{
+        font-size: 26px;
+    }
+
+    .footer-copy,
+    .disclaimer{
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .page-title{
+        font-size: 22px;
+    }
+}
