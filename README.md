@@ -18,7 +18,7 @@ This project was developed as an interactive community website that presents the
 <img width="862" height="622" alt="image" src="https://github.com/user-attachments/assets/6cc1478b-4a9e-4e2c-834a-e5ebfc7d9428" />
 
 * **About Page** — Presents the community's fictional origin, founders, and historical timeline from 2018 to 2026.
-<img width="799" height="644" alt="image" src="https://github.com/user-attachments/assets/0aa4a8ac-3fed-439a-9dd2-e5e70e610625" />
+<img width="862" height="693" alt="image" src="https://github.com/user-attachments/assets/826606e2-c730-4979-bbc0-81d9811cd106" />
 
 * **Register Page** — Provides a clan registration form with comprehensive client-side validation, inline error messages, success/error toast notifications, and automatic redirection after successful registration.
 <img width="896" height="760" alt="image" src="https://github.com/user-attachments/assets/cfdef7bc-e2a8-4c79-bdb2-fec08ac54085" />
