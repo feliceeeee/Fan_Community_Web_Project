@@ -6,6 +6,8 @@ This project was developed as an interactive community website that presents the
 
 ## Main Features
 * **Home Page** — Features the game introduction, an auto-rotating game update carousel, popular troops, community information, and beginner strategy tips.
+![Uploading image.png…]()
+
 * **Gallery Page** — Showcases artwork from the Clash of BaNG universe, including troop, hero, and special artwork.
 * **Troops Page** — Displays featured fusion troops with interactive hover effects that reveal their stats, damage type, and special abilities.
 * **About Page** — Presents the community's fictional origin, founders, and historical timeline from 2018 to 2026.
