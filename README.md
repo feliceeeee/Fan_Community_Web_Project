@@ -6,7 +6,7 @@ This project was developed as an interactive community website that presents the
 
 ## Main Features
 * **Home Page** — Features the game introduction, an auto-rotating game update carousel, popular troops, community information, and beginner strategy tips.
-![Uploading image.png…]()
+<img width="842" height="661" alt="image" src="https://github.com/user-attachments/assets/ead86ab2-4157-40b1-acbe-37fe3c19daf4" />
 
 * **Gallery Page** — Showcases artwork from the Clash of BaNG universe, including troop, hero, and special artwork.
 * **Troops Page** — Displays featured fusion troops with interactive hover effects that reveal their stats, damage type, and special abilities.
